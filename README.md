@@ -259,6 +259,7 @@ Antes de generar el APK de la Experiencia 3, cambia `USAR_API=true` (modo inicia
 - **Identidad visual:** el logo (`res/drawable/logo_app.xml`) y los colores (`ui/theme/Theme.kt` y `res/values/colors.xml`) son provisionales hasta contar con el manual de marca de la organización.
 
 
+
 ---
 
 ## Entrega y Firma de APK (Evaluación 3)
@@ -270,4 +271,6 @@ Antes de generar el APK de la Experiencia 3, cambia `USAR_API=true` (modo inicia
    * **APK firmado:** `app/release/app-release.apk`
 
 ![APK firmado release](docs/apk-release.png)
+
+
 
