@@ -56,6 +56,7 @@ object Validaciones {
             codigo = when {
                 codigoLimpio.isEmpty() -> "Campo obligatorio"
                 !formatoCodigo.matches(codigoLimpio) -> "Usa de 3 a 20 letras, números o guiones (ej: CUR-003)"
+                // Garantiza que el código sea único en todo el catálogo (ignorando mayúsculas y el propio producto si se está editando).
                 existentes.any { it.id != idActual && it.codigo.trim().equals(codigoLimpio, ignoreCase = true) } ->
                     MENSAJE_CODIGO_REPETIDO   // RN-04
                 else -> null
@@ -102,6 +103,7 @@ object Validaciones {
             cantidad = when {
                 n == null || n <= 0 -> "Ingresa una cantidad mayor que 0"
                 n > CANTIDAD_MAXIMA -> "El máximo es $CANTIDAD_MAXIMA"
+                // Impide registrar salidas mayores al stock actual para evitar inventario negativo.
                 esSalida && producto != null && n > producto.cantidadDisponible ->
                     "Solo hay ${producto.cantidadDisponible} disponibles"
                 else -> null

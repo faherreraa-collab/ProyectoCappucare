@@ -27,6 +27,7 @@ object ReglasInventario {
             TipoMovimiento.INGRESO -> producto.cantidadDisponible + cantidad
             TipoMovimiento.SALIDA -> producto.cantidadDisponible - cantidad
         }
+        // Valida que el stock resultante nunca sea negativo; si la salida supera lo disponible, cancela la operación.
         require(nuevaCantidad >= 0) { "Solo hay ${producto.cantidadDisponible} disponibles" }
 
         val nuevoEstado = when {
@@ -63,6 +64,7 @@ object ReglasInventario {
                 producto.nombre.contains(buscado, ignoreCase = true) ||
                 producto.codigo.contains(buscado, ignoreCase = true)
             val coincideCategoria = categoria == null || producto.categoria == categoria
+            // Exige que el producto cumpla simultáneamente con la búsqueda en vivo (nombre/código) y la categoría elegida.
             coincideTexto && coincideCategoria
         }
     }

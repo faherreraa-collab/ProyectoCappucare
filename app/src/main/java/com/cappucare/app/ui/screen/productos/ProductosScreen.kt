@@ -57,6 +57,7 @@ fun ProductosScreen(navController: NavHostController, viewModel: CappucareViewMo
     val todos by viewModel.productos.collectAsState()
     var texto by remember { mutableStateOf("") }
     var categoria by remember { mutableStateOf<CategoriaInsumo?>(null) }
+    // Recalcula el Catálogo en vivo cada vez que cambia el texto de busqueda de la categoria Seleccionada.
     val resultado = remember(todos, texto, categoria) { viewModel.buscarProductos(texto, categoria) }
 
     val usuario by viewModel.usuarioActivo.collectAsState()
@@ -109,6 +110,7 @@ fun ProductosScreen(navController: NavHostController, viewModel: CappucareViewMo
                     .fillMaxWidth()
                     .padding(top = 8.dp)
             )
+            // Filtro por categoría: acota la lista a un tipo de insumo específico o muestra todos si es null.
             SelectorDesplegable<CategoriaInsumo?>(
                 etiqueta = "Categoría",
                 opciones = listOf<CategoriaInsumo?>(null) + CategoriaInsumo.entries,
