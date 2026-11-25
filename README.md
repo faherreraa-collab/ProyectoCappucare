@@ -270,7 +270,7 @@ Antes de generar el APK de la Experiencia 3, cambia `USAR_API=true` (modo inicia
    * **Llave JKS:** `key/cappucare-release.jks` (Alias: `cappucare_key`)
    * **APK firmado:** `app/release/app-release.apk`
 
-![APK firmado release](docs/apk-release.png)
+![APK firmado release](docs/qr/apk-release.png)
 
 
 
