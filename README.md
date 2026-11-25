@@ -262,15 +262,15 @@ Antes de generar el APK de la Experiencia 3, cambia `USAR_API=true` (modo inicia
 
 ---
 
+
+
 ## Entrega y Firma de APK (Evaluación 3)
 
-* **Integrantes:** Sinnead Vega, Carolina Gaete, Isaías Santana y Fabián Herrera.
-* **Estado del proyecto:** Operativo en **Modo Local (`USAR_API=false`)** con persistencia en Room (`cappucare_local.db`), cumpliendo RF-00 a RF-10, reglas de negocio y 114 pruebas unitarias aprobadas. Según lo indicado por el docente, la integración con la API REST queda pendiente por falta de ambiente backend.
-* **Evidencia de firma (Release):**
-   * **Llave JKS:** `key/cappucare-release.jks` (Alias: `cappucare_key`)
-   * **APK firmado:** `app/release/app-release.apk`
+- **Integrantes:** Sinnead Vega, Carolina Gaete, Isaías Santana y Fabián Herrera.
+- **Aporte Sinnead Vega:** configuración y validación en Modo Local (`USAR_API=false`) con Room, ejecución de 114 pruebas unitarias, generación de keystore (`key/cappucare-release.jks`), compilación y firma de `app/release/app-release.apk`, y documentación/evidencia en el repositorio.
+- **Estado del proyecto:** Operativo en **Modo Local (`USAR_API=false`)** con persistencia en Room (`cappucare_local.db`), cumpliendo RF-00 a RF-10, reglas de negocio y 114 pruebas unitarias aprobadas. Según lo indicado por el docente, la integración con la API REST queda pendiente por falta de ambiente backend.
+- **Evidencia de firma (Release):**
+    - **Llave JKS:** `key/cappucare-release.jks` (Alias: `cappucare_key`)
+    - **APK firmado:** `app/release/app-release.apk`
 
 ![APK firmado release](docs/qr/apk-release.png.png)
-
-
-
