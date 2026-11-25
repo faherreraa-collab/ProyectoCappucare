@@ -12,6 +12,7 @@ plugins {
  * Si falta alguno, el build release se genera igual, pero SIN firmar.
  * Nombres: CAPPUCARE_STORE_FILE, CAPPUCARE_STORE_PASSWORD, CAPPUCARE_KEY_ALIAS, CAPPUCARE_KEY_PASSWORD.
  */
+// Fabián Herrera: configuración base de dependencias y estructura del módulo app
 fun datoDeFirma(nombre: String): String? =
     (findProperty(nombre) as String?)?.takeIf { it.isNotBlank() }
         ?: System.getenv(nombre)?.takeIf { it.isNotBlank() }

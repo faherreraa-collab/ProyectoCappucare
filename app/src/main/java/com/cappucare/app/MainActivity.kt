@@ -9,6 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.cappucare.app.navigation.AppNavigation
 import com.cappucare.app.ui.theme.CappucareTheme
+// Fabián Herrera: base de arquitectura y navegación del proyecto Cappucare Stock
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
