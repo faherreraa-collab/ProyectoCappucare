@@ -269,6 +269,7 @@ Antes de generar el APK de la Experiencia 3, cambia `USAR_API=true` (modo inicia
 - **Integrantes:** Sinnead Vega, Carolina Gaete, Isaías Santana y Fabián Herrera.
 - **Aporte Sinnead Vega:** configuración y validación en Modo Local (`USAR_API=false`) con Room, ejecución de 114 pruebas unitarias, generación de keystore (`key/cappucare-release.jks`), compilación y firma de `app/release/app-release.apk`, y documentación/evidencia en el repositorio.
 - **Aporte Carolina Gaete:** revisión de catálogo de productos, filtros por categoría, búsqueda en vivo, reglas de validación y verificación de pruebas unitarias. 
+- **Aporte Isaías Santana:** revisión del módulo de acceso (validación del login, hash SHA-256 de claves y control de sesión en el ViewModel) y comentarios explicativos en el código.
 - **Estado del proyecto:** Operativo en **Modo Local (`USAR_API=false`)** con persistencia en Room (`cappucare_local.db`), cumpliendo RF-00 a RF-10, reglas de negocio y 114 pruebas unitarias aprobadas. Según lo indicado por el docente, la integración con la API REST queda pendiente por falta de ambiente backend.
 - **Evidencia de firma (Release):**
     - **Llave JKS:** `key/cappucare-release.jks` (Alias: `cappucare_key`)

@@ -27,6 +27,8 @@ object Validaciones {
 
     /** RF-00 · Login: campos obligatorios y formato de correo. */
     fun validarLogin(usuario: String, clave: String): ErroresLogin = ErroresLogin(
+        // Valida el login antes de consultar los datos: usuario obligatorio con formato de correo y clave obligatoria.
+        // Si hay errores, el ViewModel no llama al repositorio.
         usuario = when {
             usuario.isBlank() -> "Ingresa tu usuario"
             !formatoCorreo.matches(usuario.trim()) -> "Ingresa un correo válido"

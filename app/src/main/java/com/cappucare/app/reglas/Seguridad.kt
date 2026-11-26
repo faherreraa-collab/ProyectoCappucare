@@ -25,6 +25,7 @@ object Seguridad {
 
     /** true si [clave] corresponde al [hashGuardado]. Compara en tiempo constante. */
     fun verificar(clave: String, hashGuardado: String): Boolean =
+        // Compara los hash con MessageDigest.isEqual (tiempo constante) para evitar ataques de temporización.
         MessageDigest.isEqual(
             hash(clave).toByteArray(Charsets.UTF_8),
             hashGuardado.toByteArray(Charsets.UTF_8)

@@ -182,6 +182,7 @@ class CappucareViewModel(application: Application) : AndroidViewModel(applicatio
     fun login(usuario: String, clave: String) {
         _errorLogin.value = null
         if (Validaciones.validarLogin(usuario, clave).hayErrores) return
+        // Evita doble envío: si ya hay un inicio de sesión en curso, no lanza otro.
         if (_cargandoLogin.value) return
         viewModelScope.launch {
             _cargandoLogin.value = true
